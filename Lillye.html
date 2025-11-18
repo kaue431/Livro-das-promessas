@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ficha de Personagem</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <style>
+    /* ================== ESTILOS GERAIS ================== */
+    body {
+      background: #ffffff;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .card {
+      border: none;
+    }
+
+    .text-muted {
+      font-weight: 600;
+    }
+
+    .faded {
+      opacity: 0.4;
+    }
+
+    .bg-faded {
+      background: #353535;
+    }
+
+    /* Ajuste das abas */
+    .nav-link {
+      cursor: pointer;
+    }
+
+    /* Scroll interno das seções */
+    .tab-pane {
+      height: 370px;
+      overflow: auto;
+    }
+
+    /* Borda e cor padrão */
+    .highlight {
+      background: #bc8da2;
+      color: #fff;
+    }
+
+    /* Pequena animação de hover */
+    .nav-link:hover {
+      opacity: 0.8;
+    }
+
+    /* Cor título info */
+    .label-title {
+    color: #3806c2;
+    text-transform: uppercase;
+    font-weight: 600;
+    }
+
+    /* Cor character */
+    .label-text {
+    color: #ffc400;
+    text-transform: uppercase;
+    font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="../index.html" class="btn btn-primary mt-3 ml-3" style="background:#3806c2; border:none;">⟵ Voltar</a>
+
+  <!-- ===== CONTAINER PRINCIPAL ===== -->
+    <div class="container p-1" style="max-width: 750px;">
+      <div class="row no-gutters">
+
+        <!-- ===== COLUNA ESQUERDA ===== -->
+        <div class="col-md-6 pr-md-4 mb-4">
+          <div class="p-md-2 p-4 d-flex h-100 highlight">
+            <div class="w-100 my-auto text-center">
+              
+              <!-- Título do personagem -->
+              <h1 class="text-uppercase mb-3" style="font-size: 2em; letter-spacing: 2px;">Lillye</h1>
+              
+              <!-- Imagem principal -->
+              <img src="" class="d-block mx-auto my-2" style="border: 10px double #fff; max-height: 270px;" alt="Imagem do personagem">
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== COLUNA DIREITA (informações básicas) ===== -->
+        <div class="col-md-6 mb-4">
+          <div class="bg-faded p-4" style="border: 4px solid #bc8da2;">
+            <!-- Campos de informações -->
+            <div class="mb-3 d-flex justify-content-between">
+              <span class="label-title">Nome</span><span>Lillye</span>
+            </div>
+            <div class="mb-3 d-flex justify-content-between">
+              <span class="label-title">Gênero</span><span>Feminino</span>
+            </div>
+            <div class="mb-3 d-flex justify-content-between">
+              <span class="label-title">Idade</span><span>8</span>
+            </div>
+            <div class="mb-3 d-flex justify-content-between">
+              <span class="label-title">Altura</span><span>118 cm</span>
+            </div>
+            <div class="mb-3 d-flex justify-content-between">
+              <span class="label-title">Raça</span><span>Negra</span>
+            </div>
+            <div class="mb-3 d-flex justify-content-between">
+              <span class="label-title">Promessa</span><span>---</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== ABA INFERIOR (navegação e conteúdo) ===== -->
+        <div class="col-md-12">
+          <div class="highlight p-2 rounded-top">
+            
+            <!-- Navegação entre abas -->
+            <ul class="nav justify-content-center" style="font-size: 1.5em;">
+              <li class="nav-item"><a class="nav-link text-white active" data-toggle="tab" href="#tab1" title="Aparência"><i class="fas fa-eye fa-fw"></i>Aparência</a></li>
+              <li class="nav-item"><a class="nav-link text-white" data-toggle="tab" href="#tab2" title="personalidade"><i class="fas fa-user fa-fw"></i>personalidade</a></li>
+              <li class="nav-item"><a class="nav-link text-white" data-toggle="tab" href="#tab3" title="O que gosta / O que não gosta"><i class="fas fa-heart fa-fw"></i>Gosta / Não gosta</a></li>
+              <li class="nav-item"><a class="nav-link text-white" data-toggle="tab" href="#tab4" title="história"><i class="fas fa-book fa-fw"></i>história</a></li>
+            </ul>
+          </div>
+
+          <!-- ===== CONTEÚDO DAS ABAS ===== -->
+          <div class="tab-content bg-faded">
+
+            <!-- APARENCIA -->
+            <div class="tab-pane fade show active p-4" id="tab1">
+              <p>Possui cabelos curtos encaracolados, ela é um pouco mais baixa que os outros, conseguindo esqueirar-se em lugares pequenos e se esconder facilmente. Possui olhos de amendôa em um tom mais claro que sua irmã mais velha Annie.</p>
+            </div>
+
+            <!-- PERSONALIDADE -->
+            <div class="tab-pane fade p-4" id="tab2">
+              <div class="row">
+                <!-- Exemplo de atributo -->
+                <div class="row">
+    <!-- Traço: Obsessão (Muito Alta) -->
+    <div class="col-md-6 mb-3 d-flex justify-content-between">
+        <span class="text-uppercase text-muted">Extrovertida</span>
+        <span>
+            <i class="label-text fas fa-heart"></i>
+            <i class="label-text fas fa-heart"></i>
+            <i class="label-text fas fa-heart"></i>
+            <i class="label-text fas fa-heart"></i>
+            <i class="label-text fas fa-heart faded"></i>
+        </span>
+    </div>
+
+    <!-- Traço: Misteriosa (Alta) -->
+    <div class="col-md-6 mb-3 d-flex justify-content-between">
+        <span class="text-uppercase text-muted">Inocente</span>
+        <span>
+            <i class="label-text fas fa-heart"></i>
+            <i class="label-text fas fa-heart"></i>
+            <i class="label-text fas fa-heart"></i>
+            <i class="label-text fas fa-heart faded"></i>
+            <i class="label-text fas fa-heart faded"></i>
+        </span>
+    </div>
+
+    <!-- Traço: Sádica/Provocativa (Média/Alta) -->
+    <div class="col-md-6 mb-3 d-flex justify-content-between">
+        <span class="text-uppercase text-muted">Sociável</span>
+        <span>
+            <i class="label-text fas fa-heart"></i>
+            <i class="label-text fas fa-heart"></i>
+            <i class="label-text fas fa-heart faded"></i>
+            <i class="label-text fas fa-heart faded"></i>
+            <i class="label-text fas fa-heart faded"></i>
+        </span>
+    </div>
+
+    <!-- Traço: Preocupação Genuína (Realidade) (Baixa/Média) -->
+    <!-- Refere-se à personalidade real da amiga no final do clipe -->
+    <div class="col-md-6 mb-3 d-flex justify-content-between">
+        <span class="text-uppercase text-muted">Sonhadora</span>
+        <span>
+            <i class="label-text fas fa-heart"></i>
+            <i class="label-text fas fa-heart"></i>
+            <i class="label-text fas fa-heart"></i>
+            <i class="label-text fas fa-heart"></i>
+            <i class="label-text fas fa-heart"></i>
+        </span>
+    </div>
+    
+    <!-- Traço: Estabilidade Emocional (Muito Baixa na versão "monitoring") -->
+    <div class="col-md-6 mb-3 d-flex justify-content-between">
+        <span class="text-uppercase text-muted">Brincalhona</span>
+        <span>
+            <i class="label-text fas fa-heart"></i>
+            <i class="label-text fas fa-heart"></i>
+            <i class="label-text fas fa-heart"></i>
+            <i class="label-text fas fa-heart"></i>
+            <i class="label-text fas fa-heart faded"></i>
+        </span>
+    </div>
+</div>
+                <!-- Adicione os outros atributos e listas de likes/dislikes aqui -->
+              </div>
+            </div>
+
+            <!-- O que gosta / O que não gosta -->
+            <div class="tab-pane fade p-4" id="tab3">
+            <div class="row">
+    
+            <!-- Coluna: O que gosta -->
+            <div class="col-md-6">
+              <h4 class="mb-2">O que gosta</h4>
+              <ul>
+                <li>Lancinhos</li>
+                <li>Conto de fadas</li>
+                <li>Coisas fofas</li>
+                <li>Brincar</li>
+                <li>Animais</li>
+                <li>Desenhos animados / Livro de colorir</li>
+                <li>Parquinho (por não ter muitos adultos)</li>
+                <li>Doces (doce de abóbora e de coco)</li>
+              </ul>
+            </div>
+
+            <!-- Coluna: O que não gosta -->
+            <div class="col-md-6">
+              <h4 class="mb-2">O que não gosta</h4>
+              <ul>
+                <li>adultos</li>
+                <li>Sair do Parquinho</li>
+                <li>Dormir (pois têm pesadelos com "aquilo")</li>
+                <li>Voltar a realidade</li>
+                <li>Se lembrar "daquilo"</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+            <!-- história -->
+            <div class="tab-pane fade p-4" id="tab4">
+              <p>Lillye sempre foi uma criança hiperativa e tagarela. Tanto que chamavam ela de mini papagaio. Lillye era bem aventureira e se esgueirava em lugares pequenos. Um dia, ela e Annie foram adotadas separadamente, ficando com medo mas um pouco ansiosa pela nova família, mesmo querendo sua irmã junto. Chegando lá, ela foi jogada como lixo em uma espécie de porão enorme, ela era queimada chicoteada, negligenciada (sem comida etc), tanto que pegou trauma de barulhos altos e de adultos, lidando de modo não-saudável (se isolando, dissociando, evitando adultos e conversando sozinha). Ela mudou completamente, se tornando retraída, se isolando no parquinho, tendo medo excessivo de adultos e falando apenas com Annie e outras crianças (e as vezes sozinha).</p>
+            </div>
+
+          </div> <!-- FIM tab-content -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SCRIPTS BOOTSTRAP ===== -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
