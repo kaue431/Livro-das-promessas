@@ -69,6 +69,23 @@
     text-transform: uppercase;
     font-weight: 600;
     }
+
+    @font-face {
+    font-family: 'PromessaFont';
+    src: url(fonts/APromessa-Regular.ttf) format('truetype');
+}
+.promise-symbol {
+    font-family: 'PromessaFont';
+    font-size: 25px;
+    text-align: right;
+}
+
+.no-copy {
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
   </style>
 </head>
 <body>
@@ -114,7 +131,7 @@
               <span class="label-title">Raça</span><span>Negra</span>
             </div>
             <div class="mb-3 d-flex justify-content-between">
-              <span class="label-title">Promessa</span><span>---</span>
+              <span class="label-title">Promessa</span><span class="promise-symbol no-copy">Nao deixar a irma sozinha</span>
             </div>
           </div>
         </div>
@@ -258,6 +275,33 @@
   <!-- ===== SCRIPTS BOOTSTRAP ===== -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener("contextmenu", e => e.preventDefault());
+    document.addEventListener("keydown", function(e) {
+        if (e.key === "F12") e.preventDefault();
+        if (e.ctrlKey && e.shiftKey && e.key === "I") e.preventDefault();
+        if (e.ctrlKey && e.shiftKey && e.key === "C") e.preventDefault();
+        if (e.ctrlKey && e.key === "U") e.preventDefault();
+    });
+
+    // BLOQUEIO COMPLETO DE CTRL+U
+document.addEventListener("keydown", function(e) {
+    if (e.ctrlKey && e.key.toLowerCase() === "u") {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+    }
+});
+
+// duplicação para navegadores teimosos
+document.addEventListener("keypress", function(e) {
+    if (e.ctrlKey && e.key.toLowerCase() === "u") {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+    }
+});
+  </script>
 
 </body>
 </html>
