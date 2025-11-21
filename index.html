@@ -153,5 +153,33 @@
     </div>
   </div>
 
+  <script>
+    document.addEventListener("contextmenu", e => e.preventDefault());
+    document.addEventListener("keydown", function(e) {
+        if (e.key === "F12") e.preventDefault();
+        if (e.ctrlKey && e.shiftKey && e.key === "I") e.preventDefault();
+        if (e.ctrlKey && e.shiftKey && e.key === "C") e.preventDefault();
+        if (e.ctrlKey && e.key === "U") e.preventDefault();
+    });
+
+    // BLOQUEIO COMPLETO DE CTRL+U
+document.addEventListener("keydown", function(e) {
+    if (e.ctrlKey && e.key.toLowerCase() === "u") {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+    }
+});
+
+// duplicação para navegadores teimosos
+document.addEventListener("keypress", function(e) {
+    if (e.ctrlKey && e.key.toLowerCase() === "u") {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+    }
+});
+  </script>
+
 </body>
 </html>
